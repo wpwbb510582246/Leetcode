@@ -84,26 +84,26 @@ public class L67 {
 
     /**
      * 67. 二进制求和(官方解法)
+     * carry: 下一位的进位数，初始值为0，当前位置两个数的位分别为ai和bi，则每一位的答案为(carry + ai + bi) % 2，carry = (carry + ai + bi) / 2，
+     * 重复上述步骤，直到数字a和b的每一位计算完毕，最后如果carry的最高位不为0，则将最高位添加到计算结果的末尾。
      * @param a 参数 a
      * @param b 参数 b
      * @return  两个二进制字符串的和（用二进制表示）
      */
     public String addBinaryOfficial(String a, String b) {
         StringBuffer ans = new StringBuffer();
+        //  m: a和b长度的最大值
+        //  carry: 下一位的进位数
+        int m  = Math.max(a.length(), b.length()), carry = 0;
 
-        int n = Math.max(a.length(), b.length()), carry = 0;
-        for (int i = 0; i < n; ++i) {
-            carry += i < a.length() ? (a.charAt(a.length() - 1 - i) - '0') : 0;
-            carry += i < b.length() ? (b.charAt(b.length() - 1 - i) - '0') : 0;
-            ans.append((char) (carry % 2 + '0'));
+        for (int i = 0; i < m; i++) {
+            carry += i < a.length() ? (a.charAt(a.length() - 1 -i) - '0') : 0;
+            carry += i < b.length() ? (b.charAt(b.length() - 1 -i) - '0') : 0;
+            ans.append(carry % 2);
             carry /= 2;
         }
-
-        if (carry > 0) {
-            ans.append('1');
-        }
+        if (carry > 0) ans.append("1");
         ans.reverse();
-
         return ans.toString();
     }
 
@@ -114,6 +114,7 @@ public class L67 {
 //        System.out.println(l67.addBinary("1010", "1011"));
 //        System.out.println(l67.addBinary("101111", "10"));
         System.out.println(l67.addBinary("11", "1001"));
+
         System.out.println(l67.addBinaryOfficial("11", "1001"));
     }
 

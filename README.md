@@ -3,7 +3,7 @@
 
 Leetcode刷题记录，不断学习，不断成长。
 
-算法笔记：http://notebook.grayson.top/project-21。
+算法笔记：http://notebook.grayson.top/project-21
 
 ### 做题记录
 

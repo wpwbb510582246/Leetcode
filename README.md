@@ -11,7 +11,7 @@ Leetcode刷题记录，不断学习，不断成长。
 
 1. 完成如下题目：
    1. **二分查找算法框架**，思路详见：http://notebook.grayson.top/project-21/doc-90
-   2. **快速模幂算法，**思路详见：http://notebook.grayson.top/project-21/doc-86
+   2. **快速模幂算法**，思路详见：http://notebook.grayson.top/project-21/doc-86
    3. **26.删除有序数组中的重复项**，思路详见：http://notebook.grayson.top/project-21/doc-93
    4. **42.接雨水**，思路详见：http://notebook.grayson.top/project-21/doc-92
    5. **875.爱吃香蕉的珂珂**，思路详见：http://notebook.grayson.top/project-21/doc-91
